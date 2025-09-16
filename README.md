@@ -76,7 +76,8 @@ This repository is a clone of [varadbhogayata/varadbhogayata.github.io](https://
 ## Screenshot
 Add a screenshot of the repository page here for the assignment:
 
-![Repository Screenshot](assets/img/repo-screenshot.png)
+![Repository Screenshot](assets/img/repo-screenshot1.png)
 
 ## License 📄
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+
