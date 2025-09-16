@@ -73,10 +73,15 @@ This repository is a clone of [varadbhogayata/varadbhogayata.github.io](https://
 
 - 🔃 Create a new pull request.
 
-## Screenshot
+## Screenshot part1
 Add a screenshot of the repository page here for the assignment:
 
 ![Repository Screenshot](assets/img/repo-screenshot.png)
+
+## Screenshot part2
+Add a screenshot of the repository page here for the assignment:
+
+![Repository Screenshot](assets/img/repo-screenshot2.png)
 
 ## License 📄
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
