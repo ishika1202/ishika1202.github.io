@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
   <!-- Font Awesome Icon - CSS-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
   <title>Ishika Mittal - AI Engineer & Founder of Coconut | Robotics & ML</title>
@@ -105,6 +107,10 @@
              mdi-av-my-library-books small-->
         <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Places Travelled section" href="#travel" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
       </li>
 
       <li class="bold">
@@ -660,6 +666,14 @@
       </div>
     </section>
 
+    <!-- Places Travelled Section -->
+    <section id="travel" class="section scrollspy">
+      <h3 class="page-title white-text teal">Places Travelled</h3>
+      <div class="container">
+        <div id="travel-map" style="height: 420px; border-radius: 8px;"></div>
+      </div>
+    </section>
+
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
       <h3 class="page-title white-text teal">Skills</h3>
@@ -829,17 +843,30 @@
 
   <!-- Materialize - Compiled and minified JavaScript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+    // Initialize Leaflet map for Places Travelled
+    document.addEventListener('DOMContentLoaded', function () {
+      var mapEl = document.getElementById('travel-map');
+      if (!mapEl) return;
+      var map = L.map('travel-map', { scrollWheelZoom: false }).setView([20.0, 0.0], 2);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      var places = [
+        { name: 'Japan', coords: [35.6762, 139.6503] },
+        { name: 'Turkey', coords: [41.0082, 28.9784] }, // Istanbul
+        { name: 'Singapore', coords: [1.3521, 103.8198] },
+        { name: 'Bangkok', coords: [13.7563, 100.5018] },
+        { name: 'Maldives', coords: [4.1755, 73.5093] }, // Malé
+        { name: 'Dubai', coords: [25.2048, 55.2708] },
+        { name: 'USA', coords: [40.7128, -74.0060] }, // NYC
+        { name: 'Canada', coords: [43.6532, -79.3832] }, // Toronto
+        { name: 'India', coords: [28.6139, 77.2090] } // New Delhi
+      ];
+      places.forEach(function(p){ L.marker(p.coords).addTo(map).bindPopup(p.name); });
+    });
   </script>
 </body>
 
