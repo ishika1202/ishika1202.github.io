@@ -89,6 +89,12 @@ Add a screenshot of the repository page and changed color theme of the website h
 ![Repository Screenshot](assets/img/repo-screenshot3.png)
 ![Repository Screenshot](assets/img/repo-screenshot4.png)
 
+## Screenshot part4
+Add a screenshot of the repository page and places you travelled here for the assignment:
+
+![Repository Screenshot](assets/img/repo-screenshot5.png)
+![Repository Screenshot](assets/img/repo-screenshot6.png)
+
 ## License 📄
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
