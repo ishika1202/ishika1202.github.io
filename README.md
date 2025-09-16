@@ -95,6 +95,12 @@ Add a screenshot of the repository page and places you travelled here for the as
 ![Repository Screenshot](assets/img/repo-screenshot5.png)
 ![Repository Screenshot](assets/img/repo-screenshot6.png)
 
+## Screenshot part5
+Add a screenshot of the repository page here for the assignment:
+
+![Repository Screenshot](assets/img/repo-screenshot7.png)
+![Repository Screenshot](assets/img/repo-screenshot8.png)
+
 ## License 📄
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
 
